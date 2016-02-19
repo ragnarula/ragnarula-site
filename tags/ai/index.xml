@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Raghav Narula</title>
+    <link>http://www.raghavnarula.co.uk/tags/ai/</link>
+    <description>Recent content in Ai on Raghav Narula</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Raghav Narula 2016. All Rights Reserved.</copyright>
+    <lastBuildDate>Tue, 16 Feb 2016 11:26:51 +0000</lastBuildDate>
+    <atom:link href="http://www.raghavnarula.co.uk/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Intelligently Artificial F.C. - A Robocup Simulation League Team</title>
+      <link>http://www.raghavnarula.co.uk/post/robocup/</link>
+      <pubDate>Tue, 16 Feb 2016 11:26:51 +0000</pubDate>
+      
+      <guid>http://www.raghavnarula.co.uk/post/robocup/</guid>
+      <description>&lt;div style=&#34;text-align: center&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/155558305&#34; width=&#34;500&#34; height=&#34;264&#34; frameborder=&#34;0&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This project was mine and &lt;a href=&#34;http://jamesfrost.me&#34;&gt;James Frost&amp;rsquo;s&lt;/a&gt; coursework for Introduction to Artificial Intelligence. We were tasked with creating an AI football team using the &lt;a href=&#34;http://robocup-atan.github.io/atan/&#34;&gt;ATAN&lt;/a&gt; interface to the &lt;a href=&#34;https://sourceforge.net/projects/sserver/&#34;&gt;Robocup 2D Soccer Simulation Server&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Our goal was to come up with some sort of architecture that would allow us to seperate our design in to a collection of small simple components, each design to do just one clearly defined task. These &amp;ldquo;AI Components&amp;rdquo; are arranged sequentially, and once they finish processing a task, they hand the processed data over to the next component in the chain, being careful to make a clean hand-off and not keep and references. This means each component could run as a concurrent process if required. The finished arrangement looked something like the image below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.raghavnarula.co.uk/img/robocup.jpg&#34; alt=&#34;&amp;quot;Robocup Architecture&amp;quot;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Initially the model contains nothing but the raw sensor data given by the ATAN interface at that simulation step. When it arrives at a component, the component uses the raw data to do some processing and more information to the model. This could be something simple like figuring out which way the agent is facing, how fast it&amp;rsquo;s moving or which way to the goal. Eventually the model can be handed off to the agent at the end of the chain, where the information in the model can be used to generate an action.&lt;/p&gt;
+
+&lt;p&gt;Overall the architecture worked really well. Not only did it make the code easier to reason about, it also made it easier to collaborate with another programmer, as we could work on seperate components knowing we wouldn&amp;rsquo;t interfere with eachother&amp;rsquo;s work.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://www.raghavnarula.co.uk/</loc>
+    <lastmod>2016-02-16T11:32:14+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.raghavnarula.co.uk/contact/</loc>
+    <lastmod>2016-02-16T11:32:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.raghavnarula.co.uk/post/robocup/</loc>
+    <lastmod>2016-02-16T11:26:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.raghavnarula.co.uk/post/oscar/</loc>
+    <lastmod>2016-02-15T22:39:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.raghavnarula.co.uk/about/</loc>
+    <lastmod>2016-02-15T09:52:49+00:00</lastmod>
+  </url>
+  
+</urlset>

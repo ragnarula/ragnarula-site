@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Raghav Narula</title>
+    <link>http://www.raghavnarula.co.uk/tags/python/</link>
+    <description>Recent content in Python on Raghav Narula</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Raghav Narula 2016. All Rights Reserved.</copyright>
+    <lastBuildDate>Mon, 15 Feb 2016 22:39:12 +0000</lastBuildDate>
+    <atom:link href="http://www.raghavnarula.co.uk/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Oscar</title>
+      <link>http://www.raghavnarula.co.uk/post/oscar/</link>
+      <pubDate>Mon, 15 Feb 2016 22:39:12 +0000</pubDate>
+      
+      <guid>http://www.raghavnarula.co.uk/post/oscar/</guid>
+      <description>&lt;p&gt;Oscar started life as a desktop C++ called OSCBridge. The idea was simple, Set up an OSC server, establish a TCP connection to a device such as a &lt;a href=&#34;https://www.barco.com/en/Products/Image-processing/Presentation-switchers/Multi-layer-video-display-system.aspx&#34;&gt;Barco ScreenPRO-II&lt;/a&gt; series switcher, and be able to forward messages recieved at the OSC server to the switcher. Devices such as the barco often come with their own set of commands that can be initiated via telnet. The idea wasn&amp;rsquo;t to build an extra abstraction over the available commands, but simply to provide a more convenient interface.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&#34;http://github.com/ragnarula/oscbridge&#34;&gt;original implementation&lt;/a&gt; did what it was meant to but created a large budren on the developer (me!) to package the software for multiple platforms, operating systems etc etc&amp;hellip; As well as headaches with linking to and shipping Qt libraries in a way which didn&amp;rsquo;t contradict their license terms. Eventually I came to the conclusion that it was time to change the architecture to one which didn&amp;rsquo;t depend on the user&amp;rsquo;s platform. Oscar was born.&lt;/p&gt;
+
+&lt;p&gt;Oscar is developed in python and is designed to be run as embedded software. This means I no longer have to worry about developing for multiple platforms, and instead offer the solution as a hardware device, or at the very least, a virtual appliance. In either case, I can specify the environment as part of the software. Development was done with a Raspberry Pi which was able to handle the workload without breaking a sweat.&lt;/p&gt;
+
+&lt;p&gt;Oscar also now employs an event driven, message passing design. Messages are recieved at the OSC interface and passed to seperate routines running in green threads for asyncronous processing, freeing up the OSC server to recieve more messages. Failures from malformed messages occur fast and don&amp;rsquo;t bring down the entire system. New threads are only created when establishing new connections to newly input device definitions, unlike the old system which created a new thread to process each message.&lt;/p&gt;
+
+&lt;p&gt;Overall, it is more efficient, more ressilient to failure and carries a much lower burden from variations in deployment environments.&lt;/p&gt;
+
+&lt;p&gt;Oscar was tested on a three day event in September 2015, where it was able to route messages from two &lt;a href=&#34;https://figure53.com/qlab/&#34;&gt;Qlab&lt;/a&gt; controllers to nine &lt;a href=&#34;http://dtvideolabs.com/PlaybackPro.html&#34;&gt;Playback Pro&lt;/a&gt; machines without a hitch.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
