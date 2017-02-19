@@ -1,0 +1,73 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/*
+main #58C9F4
+accent #FFCE55
+dark gray #151D20
+light gray #DEE7EB
+*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Yantramanav', sans-serif;
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.max-width {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 950px; /* or 950px */
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.jumbotron {
+  background-color: #58C9F4;
+}
+
+/* Add a gray background color and some padding to the footer */
+/*footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}*/
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+}
+
+h1, h2, h3, p, a {
+  color: #151D20;
+}
+
+.navbar .nav > li > a {
+  color: #151D20;
+}
+.navbar .nav > li > a:hover {
+  color: #FFCE55;
+}
+
+.jumbotron .container > h1, .jumbotron .container > p {
+  color: white;
+  font-family: 'Yantramanav', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f2f2f2;
+  padding: 25px;
+}

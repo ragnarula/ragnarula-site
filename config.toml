@@ -1,0 +1,8 @@
+languageCode = "en-us"
+title = "Raghav Narula"
+baseurl = "http://www.raghavnarula.co.uk/"
+theme = "ragstheme"
+
+[taxonomies]
+Tag = "Tags"
+Project = "Projects"

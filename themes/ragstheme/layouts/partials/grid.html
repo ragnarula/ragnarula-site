@@ -1,0 +1,19 @@
+<div class="max-width">
+<div class="container-fluid bg-3 text-center">
+  <div class="page-header">
+    <h3>Recent Projects</h3><br>
+  </div>
+  <div class="row">
+    {{ range where .Data.Pages "Section" "project"}}
+    {{ .Render "tile" }}
+    {{ end }}
+  </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+  <div class="row">
+
+  </div>
+</div><br><br>
+<div id="push"></div>
+</div>
