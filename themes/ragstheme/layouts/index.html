@@ -3,18 +3,35 @@
 
 <div class="container-fluid max-width">
   <div class="row">
-    <div class="col-sm-12">
-      {{ range where .Data.Pages "Title" "About Me" }}
-      <div class="text-center page-header" id="about">
-        <h3>{{ .Title }}</h3>
-      </div>
-      {{ .Content }}
-      {{ end }}
+    <div class="col-sm-4 leftcol">
+      <!-- <div class="col-xs-12"> -->
+        {{ range where .Data.Pages "Title" "About Me" }}
+        <div class="page-header" id="about">
+          <h2>{{ .Title }}</h2>
+        </div>
+        <p align="justify">{{ .Content }}</p>
+        {{ end }}
+      <!-- </div> -->
     </div>
+    {{ $projects := where .Data.Pages "Section" "project"}}
+    {{ if $projects}}
+      <div class="col-sm-8 rightcol">
+        <!-- <div class="col-xs-12"> -->
+          <div class="page-header" id="projects">
+            <h2>Recent Projects</h2>
+          </div>
+          <!-- <div class="row"> -->
+            {{ range where .Data.Pages "Section" "project"}}
+            {{ .Render "tile" }}
+            {{ end }}
+          <!-- </div> -->
+        <!-- </div> -->
+      </div>
+    {{ end }}
   </div>
 </div>
 
-<div class="max-width">
+<!-- <div class="max-width">
   <div class="container-fluid bg-3 text-center">
       {{ $projects := where .Data.Pages "Section" "project"}}
       {{ if $projects}}
@@ -28,12 +45,8 @@
       </div>
       {{ end  }}
     </div><br>
-  <div class="container-fluid bg-3 text-center">
-    <div class="row">
-
-    </div>
-  </div><br><br>
-  <div id="push"></div>
-</div>
+  </div><br><br> -->
+  <!-- <div id="push"></div> -->
+<!-- </div> -->
 
 {{ partial "footer.html" . }}

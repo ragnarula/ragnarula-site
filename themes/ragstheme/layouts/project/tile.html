@@ -1,4 +1,26 @@
-<div class="col-sm-4">
-  <h2>{{ printf "%s" .Title }}</h2>
-  <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="{{ printf "%s logo" .Title }}">
+<div class="col-xs-12">
+  <!-- <a href="{{ printf "/project/%s" .Title }}">
+    <img src="{{ .Params.tile_img }}" class="img-responsive" style="width:100%" alt="{{ printf "%s logo" .Title }}">
+  </a> -->
+  <a href="{{ printf "/project/%s" .Title }}">
+    <div class="row tile">
+      <div class="col-xs-8">
+        <h3 class="tile-header">{{ .Title }}</h3>
+        <div class="tile-tags">
+          <br>
+          <p>
+            {{ range .Params.tags }}
+            {{ . }}
+            {{ end }}
+          </p>
+        </div>
+
+      </div>
+      <div class="col-xs-4 tile-block" style="background-color:#FFCE55;">
+
+      </div>
+    </div>
+
+  </a>
+
 </div>

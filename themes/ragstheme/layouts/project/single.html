@@ -4,9 +4,12 @@
   {{ with .Params.banner_img }}<img class="img-responsive img-banner" src="{{ . }}" >{{ end }}
 
   <div class="page-header">
-    <h1>{{ .Title }}</h1>
+    <h1>Project: {{ .Title }}</h1>
   </div>
-  {{ .Content }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+
 </div>
 
 {{ partial "footer.html" . }}
