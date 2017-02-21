@@ -18,9 +18,9 @@ box: debian
 build:
   steps:
     - arjen/hugo-build:
-        version: "0.15"
-        theme: blackburn
-        flags: 
+        version: "0.18"
+        theme: ragstheme
+        flags:
 
 deploy:
   steps:
